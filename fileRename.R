@@ -3,9 +3,14 @@
 # https://stackoverflow.com/a/38022269/4963125
 #
 # setup "namelist.csv" with these columns:
+#   - oldname
+#   - newname
+#
+# This can also be adapted for paired image-file renaming if these columns are used instead:
+#   (and if so -- need to tweak some lines below)
 #   - oldDNGname
-#   - newDNGname
 #   - oldJPGname
+#   - newDNGname
 #   - newJPGname
 #
 #   e.g.: https://docs.google.com/spreadsheets/d/15QmkeLX7f4ThQimyilv5ahwjHrkMISlkTJVui6MKF5s/edit#gid=1073126401&range=A1
