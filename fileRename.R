@@ -32,15 +32,23 @@ Sys.time()
 
 # rename the files
 # NOTE - test this on a few first, then run in full
-for (i in 1:NROW(namelist)) {
-  
-  # file.rename(from = namelist$oldDNGname[i], to = namelist$newDNGname[i])
-  # 
-  # file.rename(from = namelist$oldJPGname[i], to = namelist$newJPGname[i])
+if (all(namelist$exists)==TRUE) {
 
-  file.rename(from = namelist$oldname[i], to = namelist$newname[i])
+  for (i in 1:NROW(namelist)) {
   
-  print(i)
+    # file.rename(from = namelist$oldDNGname[i], to = namelist$newDNGname[i])
+    # 
+    # file.rename(from = namelist$oldJPGname[i], to = namelist$newJPGname[i])
+
+    file.rename(from = namelist$oldname[i], to = namelist$newname[i])
+
+    print(i)
+  
+    }
+  
+} else {
+  
+  print(paste("check file paths & names: ", paste(namelist[namelist$exists==FALSE,], collapse = "\n"))
   
 }
 
