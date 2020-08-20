@@ -48,7 +48,7 @@ if (all(namelist$exists)==TRUE) {
   
 } else {
   
-  print(paste("check file paths & names: ", paste(namelist[namelist$exists==FALSE,], collapse = "\n"))
+  print(paste("check file paths & names: ", paste(namelist[namelist$exists==FALSE,], collapse = "|")))
   
 }
 
